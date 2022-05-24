@@ -1,0 +1,67 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.pink),
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatefulWidget {
+  Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  final _textController = TextEditingController();
+
+  String _displayText = 'Hellooooooo';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 181, 223, 255),
+      //appBar: AppBar(),
+      body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Container(
+              color: Color.fromARGB(255, 253, 214, 202),
+              child: Column(
+                    children: [
+              TextField(
+                controller: _textController,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Type something'
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  print(_textController.text);
+                  setState(() {
+                    _displayText = _textController.text;
+                  });
+                },
+                child: Text('Click'),
+              ),
+              Text(_displayText)
+                    ],
+                  ),
+            ),
+          )),
+    );
+  }
+}

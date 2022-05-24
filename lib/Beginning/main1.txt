@@ -1,0 +1,131 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.pink),
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  final String name = "Sinro Robotics";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 181, 223, 255),
+      //appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                // width: double.infinity,
+                // height: double.infinity,
+                color: Colors.green,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      name,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 180, 57, 57),
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            print(' Blah Blah');
+                          },
+                          child: Text('Click Me'),
+                        ),
+                        IconButton(
+                            onPressed: (() {
+                              print('hhsfh');
+                            }),
+                            icon: Icon(Icons.access_alarm))
+                      ],
+                    ),
+                    ElevatedButton(
+                        onPressed: (() {
+                          print('bloom');
+                        }),
+                        child: Text('HEHE'))
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 22, 70, 70),
+                  borderRadius: BorderRadius.circular(50)
+                  ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.amber,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      name,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 180, 57, 57),
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            print(' Blah Blah');
+                          },
+                          child: Text('Click Me'),
+                        ),
+                        IconButton(
+                            onPressed: (() {
+                              print('hhsfh');
+                            }),
+                            icon: Icon(Icons.access_alarm))
+                      ],
+                    ),
+                    ElevatedButton(
+                        onPressed: (() {
+                          print('bloom');
+                        }),
+                        child: Text('HEHE'))
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

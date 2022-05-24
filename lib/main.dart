@@ -1,21 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:sample_project_1/listview_sample.dart';
+import 'package:sample_project_1/screen_1.dart';
+import 'package:sample_project_1/screen_2.dart';
 
 void main(List<String> args) {
-  runApp(ListViewApp());
-} 
+  runApp(MyApp());
+}
 
-class ListViewApp extends StatelessWidget {
-  const ListViewApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.lightBlue),
-     home: ListViewSample(),
-   ); 
+    return MaterialApp(
+      title: 'Blah Blah',
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        
+      ),
+      home: ScreenOne(),
+      routes: {
+        'screen_1' :(context) {
+          return ScreenOne();
+          },
+        'screen_2' :(context) {
+          return ScreenTwo();
+        }
+      },
+    );
   }
 }

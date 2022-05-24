@@ -19,7 +19,7 @@ class ListViewSample extends StatelessWidget {
                 subtitle: Text('Message $index'),
                 leading: CircleAvatar(
                   radius: 30,
-                  backgroundImage: NetworkImage('https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg'),
+                  backgroundImage: AssetImage('assets/images/panda.jpg'),
                 ),
                 trailing: Text('1$index:00 PM'),
                 
