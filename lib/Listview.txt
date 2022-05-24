@@ -1,0 +1,17 @@
+ListView(
+          children: List.generate(
+            100,
+            (index) {
+              return Column(
+                children: [
+                  Text('Text $index'),
+                  Divider(
+                    height: 50,
+                    thickness: 5,
+                    color: Color.fromARGB(255, 135, 104, 11),
+                    )
+                ],
+              );
+            },
+          ),
+        ),
