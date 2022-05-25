@@ -9,6 +9,9 @@ class ScreenTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(name),
+      ),
       body: SafeArea(
         child: Column(
           children: [

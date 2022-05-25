@@ -2,8 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_project_1/screen_1.dart';
 import 'package:sample_project_1/screen_2.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main(List<String> args) {
+late SharedPreferences sharedPreferences;
+
+Future<void> main() async{
+  sharedPreferences = await SharedPreferences.getInstance();
   runApp(MyApp());
 }
 
