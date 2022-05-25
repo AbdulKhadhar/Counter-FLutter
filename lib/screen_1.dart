@@ -1,3 +1,5 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -10,24 +12,21 @@ class ScreenOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Text('Screen 1'),
-            ElevatedButton(
-              onPressed: () {
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(builder: (context) {
-                //     return ScreenTwo();
-                //   }),
-                // );
-
-                Navigator.of(context).pushNamed('screen_2');
+          child: ListView.separated(
+              itemBuilder: (ctx,index){
+                return ListTile(
+                  title: Text('Person $index'),
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
+                      return ScreenTwo(name: 'Person $index');
+                    }));
+                  },
+                );
               },
-              child: Text('Screen Two'),
-            )
-          ],
-        ),
-      ),
+              separatorBuilder: (ctx,index){
+                return Divider();
+              },
+              itemCount: 30)),
     );
   }
 }

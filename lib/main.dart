@@ -19,14 +19,14 @@ class MyApp extends StatelessWidget {
         
       ),
       home: ScreenOne(),
-      routes: {
-        'screen_1' :(context) {
-          return ScreenOne();
-          },
-        'screen_2' :(context) {
-          return ScreenTwo();
-        }
-      },
+      // routes: {
+      //   'screen_1' :(context) {
+      //     return ScreenOne();
+      //     },
+      //   'screen_2' :(context) {
+      //     return ScreenTwo();
+      //   }
+      // },
     );
   }
 }

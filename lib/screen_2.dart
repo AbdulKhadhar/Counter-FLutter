@@ -3,7 +3,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class ScreenTwo extends StatelessWidget {
-  const ScreenTwo({Key? key}) : super(key: key);
+  const ScreenTwo({Key? key , required this.name}) : super(key: key);
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class ScreenTwo extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: (){
               Navigator.of(context).pop();
-            }, child: Text('Go back')),
+            }, child: Text(name)),
           ],
         ),
       ),
