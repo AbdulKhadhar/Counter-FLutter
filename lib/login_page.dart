@@ -24,6 +24,7 @@ class LoginPage extends StatelessWidget {
                 labelText: 'Username'
               ),
             ),
+            SizedBox(height: 20,),
             TextFormField(
               decoration: const InputDecoration(
                 hintText: 'Enter your password ?',
@@ -33,6 +34,7 @@ class LoginPage extends StatelessWidget {
               ),
               obscureText: true,
             ),
+            SizedBox(height: 30,),
             ElevatedButton(onPressed: (){}, child: Text('Login')),
             InkWell(
               child: new Text('Forgot Password?'),

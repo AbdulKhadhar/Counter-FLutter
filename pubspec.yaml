@@ -30,7 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  shared_preferences: ^2.0.15
+  animated_splash_screen: ^1.2.0
+  
 
 dev_dependencies:
 
