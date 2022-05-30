@@ -13,6 +13,6 @@ class Splash extends StatelessWidget {
     return AnimatedSplashScreen(splash: Icons.home, duration: 3000, nextScreen: LoginPage());
     
     }
-      
-    
+
+
   }

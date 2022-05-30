@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sample_project_1/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -35,7 +36,9 @@ class LoginPage extends StatelessWidget {
               obscureText: true,
             ),
             SizedBox(height: 30,),
-            ElevatedButton(onPressed: (){}, child: Text('Login')),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
+            }, child: Text('Login')),
             InkWell(
               child: new Text('Forgot Password?'),
               onTap: (){
