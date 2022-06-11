@@ -17,6 +17,7 @@ class ScreenMain extends StatelessWidget {
     return Container(
       child: Center(
         child: DropdownButtonFormField(
+          decoration: InputDecoration(),
           hint: Text('Search Engines'),
           items: _droplist.map((e){
           return DropdownMenuItem(
