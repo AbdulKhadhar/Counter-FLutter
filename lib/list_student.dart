@@ -21,6 +21,14 @@ class ListStudents extends StatelessWidget {
               leading: Icon(Icons.person),
               title: Text(data.name),
               subtitle: Text(data.age),
+              trailing: IconButton(icon:Icon(Icons.delete) , color: Colors.red,
+               onPressed: (){
+                if(data.id!=null){
+                deleteStudent(data.id!);
+                }else{
+                  print('id is null , cant\'t proceed');
+                }
+              },),
             );
           },
           separatorBuilder: (ctx, index) {

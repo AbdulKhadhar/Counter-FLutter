@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sample_project_1/add_student.dart';
+import 'package:sample_project_1/db/functions/db_functions.dart';
 import 'package:sample_project_1/list_student.dart';
 
 class ListStudentsHome extends StatelessWidget {
@@ -11,6 +12,7 @@ class ListStudentsHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    getAllStudents();
     return Scaffold(
       body: SafeArea(
         child: Column(

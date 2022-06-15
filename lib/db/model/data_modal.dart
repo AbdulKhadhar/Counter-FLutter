@@ -5,10 +5,13 @@ part 'data_modal.g.dart';
 class StudentModel {
 
   @HiveField(0)
-  final String name;
+  int? id;
 
   @HiveField(1)
+  final String name;
+
+  @HiveField(2)
   final String age;
 
-  StudentModel({required this.name,  required this.age});
+  StudentModel({required this.name,  required this.age , this.id});
 }
